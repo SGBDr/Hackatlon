@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	implementation	'javax.annotation:javax.annotation-api:1.3.2'
+	implementation	'javax.inject:javax.inject:1'
+}
+
+javafx {
+    version = "17.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing' ]
+	configuration = 'implementation'
+}
+
+sourceSets {
+	main.java.srcDirs = ['src']
+	main.resources.srcDirs = ['src']
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+targetCompatibility = 15
